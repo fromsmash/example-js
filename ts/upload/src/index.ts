@@ -1,5 +1,5 @@
 
-import { SmashUploader } from "smash-uploader";
+import { SmashUploader } from "@smash-sdk/uploader-js";
 
 const su = new SmashUploader({ region: "eu-west-3", token: "Put a api key here" })
 const files = [
