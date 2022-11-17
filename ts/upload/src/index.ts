@@ -13,10 +13,10 @@ su.upload({
     title: 'my-transfer',
     description: 'my-description',
     password: 'my-password', //used to secure transfer access
-    availabilityDuration: 86400, // beween 15 min and 1 month, unit in seconds
+    availabilityDuration: 86400, // between 15 min and 1 month, unit in seconds
     customization: {
-        logo: 'https://my-logo-url.com', // image url, recommended size 300 x 300
-        background: 'https://my-background-url.com', //iamge url, recommended size 2000 x 1125, this also support vimeo url and youtube url
+        logo: 'https://my-logo-url.com', // https image url, recommended size 300 x 300
+        background: 'https://my-background-url.com', // https image url, recommended size 2000 x 1125, this also support vimeo url and youtube url
     },
     preview: 'Full', //Full or None is no preview is needed, default to Full
 }).then(transfer => {
