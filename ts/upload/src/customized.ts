@@ -1,7 +1,7 @@
 
 import { SmashUploader } from "@smash-sdk/uploader";
 
-const su = new SmashUploader({ region: "eu-west-3", token: "Put a api key here" })
+const su = new SmashUploader({ region: "eu-west-3", token: "Put your api key here" })
 const files = [
     "./dummyFiles/dummy1.png",
     "./dummyFiles/dummy2.png",
@@ -12,6 +12,7 @@ su.upload({
     language: 'en', // available Language fr, en, it, de, pt, es. this property is used to translate emails when used
     title: 'my-transfer',
     description: 'my-description',
+    //teamId: "*****-******-******-********-*7", // This can be omitted, enable the use of subdomain.
     password: 'my-password', //used to secure transfer access
     availabilityDuration: 86400, // between 15 min and 1 month, unit in seconds
     customization: {
@@ -20,7 +21,7 @@ su.upload({
     },
     preview: 'Full', //Full or None is no preview is needed, default to Full
 }).then(transfer => {
-    console.log(transfer);
+    console.log("Transfer", transfer);
 }).catch(error => {
-    console.log(error);
+    console.log("Error", error);
 });
