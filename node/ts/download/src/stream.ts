@@ -5,8 +5,9 @@ import { SmashDownloader } from "@smash-sdk/downloader";
 const stream = fs.createWriteStream("./dummyFiles/dummy1.zip", { flags: "w" });
 
 const sd3 = new SmashDownloader({
-    token: "Put your api key here",
-    transferId: "Put your trnasfer id here",
+    token: "put apikey here",
+    transferId: "your transferId",
+    //url: "or url",
     stream,
 });
 
@@ -15,3 +16,4 @@ sd3.download().then(downloadedItem => {
 }).catch(error => {
     console.log("Error", error);
 });
+
