@@ -1,3 +1,4 @@
 node_modules
 dist
 ts/download/dummyFiles/
+node/ts/download/dummyFiles/
