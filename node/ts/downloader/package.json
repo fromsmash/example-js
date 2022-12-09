@@ -1,7 +1,7 @@
 {
-  "name": "download-example-1",
+  "name": "downloader-example-1",
   "version": "1.0.0",
-  "description": "download example 1",
+  "description": "downloader example 1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
