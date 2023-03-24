@@ -1,7 +1,7 @@
 
 import { Transfer } from "@smash-sdk/transfer/10-2019";
 
-const transferSdk = new Transfer({ region: "eu-west-3", token: "Put your api key here" })
+const transferSdk = new Transfer({ region: "eu-west-3", token: "Put your Smash API key here" })
 
 transferSdk.getTransfer({
     transferId: 'transferId'
