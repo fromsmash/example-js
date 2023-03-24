@@ -1,7 +1,7 @@
 
 import { SmashUploader } from "@smash-sdk/uploader";
 
-const su = new SmashUploader({ region: "eu-west-3", token: "Put your api key here" })
+const su = new SmashUploader({ region: "eu-west-3", token: "Put your Smash API key here" })
 const files = [
     { name: "tree.png", file: "./dummyFiles/dummy1.png" },
     { name: "folder1/tree.png", file: "./dummyFiles/dummy2.png" },
