@@ -1,6 +1,4 @@
-
-import * as fs from 'fs'
-import { SmashDownloader } from "@smash-sdk/downloader";
+import { DownloaderOutput, SmashDownloader } from "@smash-sdk/downloader";
 
 const sd1 = new SmashDownloader({
     token: "Put  Smash API key here",
@@ -9,7 +7,7 @@ const sd1 = new SmashDownloader({
     //enableOverride: true, // support for override
 });
 
-sd1.download().then(downloadedItem => {
+sd1.download().then((downloadedItem: DownloaderOutput) => {
     console.log("Download", downloadedItem);
 }).catch(error => {
     console.log("Error", error);
