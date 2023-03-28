@@ -1,5 +1,4 @@
 
-import * as fs from 'fs'
 import { SmashDownloader } from "@smash-sdk/downloader";
 
 const sd1 = new SmashDownloader({
