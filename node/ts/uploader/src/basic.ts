@@ -1,4 +1,3 @@
-
 import { SmashUploader } from "@smash-sdk/uploader";
 
 const su = new SmashUploader({ region: "eu-west-3", token: "Put your api key here" })
