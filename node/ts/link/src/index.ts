@@ -1,12 +1,14 @@
 
-import { Link } from "@smash-sdk/link/10-2019";
+import { GetTargetInput, GetTargetOutput, Link } from "@smash-sdk/link/10-2019";
 
 const linkSdk = new Link({ token: "Put your Smash API key here" })
 
-linkSdk.getTarget({
+const params: GetTargetInput = {
     targetId: 'url',
-}).then(link => {
+};
+
+linkSdk.getTarget(params).then((link: GetTargetOutput) => {
     console.log("Link", link);
-}).catch(error => {
+}).catch((error: unknown) => {
     console.log("Error", error);
 });

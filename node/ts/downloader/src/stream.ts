@@ -13,7 +13,7 @@ const sd3 = new SmashDownloader({
 
 sd3.download().then((downloadedItem: DownloaderOutput) => {
     console.log("Download", downloadedItem);
-}).catch(error => {
+}).catch((error: unknown) => {
     console.log("Error", error);
 });
 

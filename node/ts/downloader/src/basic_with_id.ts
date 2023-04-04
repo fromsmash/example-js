@@ -10,6 +10,6 @@ const sd1 = new SmashDownloader({
 
 sd1.download().then((downloadedItem: DownloaderOutput) => {
     console.log("Download", downloadedItem);
-}).catch((error: any) => {
+}).catch((error: unknown) => {
     console.log("Error", error);
 });
