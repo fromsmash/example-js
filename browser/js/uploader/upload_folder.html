@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/@smash-sdk/uploader/dist/SmashUploader.browser.js"></script>
+</head>
+
+<body>
+    <form name="uploadForm">
+		<label for="folderUpload">Select a folder to upload:</label>
+		<input type="file" id="uploadInput" webkitdirectory directory multiple>
+        <input type="button" onclick="upload();" value="Send file(s)">
+	</form>
+
+    <script>
+        function upload() {
+            const fileInput = document.getElementById("uploadInput");
+            const su = new SmashUploader({ region: "eu-west-3", token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MzE1MzEwLWQwMDEtNDkxNi1hYTM0LTBiZDQyMmU0ODUzMy1jbyIsInVzZXJuYW1lIjoidGVycnlAZnJvbXNtYXNoLmNvbSIsInJlZ2lvbiI6ImV1LXdlc3QtMyIsImlwIjoiOTAuODUuMTk0LjU5IiwiYWNjb3VudCI6IjE3MzE1MzEwLWQwMDEtNDkxNi1hYTM0LTBiZDQyMmU0ODUzMy1jbyIsImlhdCI6MTY4MDAxODU4OCwiZXhwIjoxNjgwNjIzMzg4fQ.rKn-Os3jCaDK7C067NlOtOziVkRZKrLl0w63alddpp8" })
+            const parsedFiles = [...fileInput.files].map(file => {
+                return {
+                    name: file.webkitRelativePath,
+                    file
+                }
+            });
+            su.upload({ files: parsedFiles })
+                .then(transfer => { console.log("Transfer", transfer); })
+                .catch(error => { console.log("Error", error); });
+
+            su.on('progress', (event) => { console.log(event.data.progress.percent); });
+        }
+    </script>
+</body>
+
+</html>
