@@ -8,7 +8,9 @@
     "build": "tsc",
     "basic": "ts-node ./src/basic.ts",
     "tree": "ts-node ./src/tree.ts",
-    "customized": "ts-node ./src/customized.ts"
+    "customized": "ts-node ./src/customized.ts",
+    "string": "ts-node ./src/string.ts",
+    "buffer": "ts-node ./src/buffer.ts"
   },
   "license": "MIT",
   "devDependencies": {
