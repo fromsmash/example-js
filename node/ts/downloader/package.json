@@ -20,6 +20,6 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@smash-sdk/downloader": "^0.0.3"
+    "@smash-sdk/downloader": "^0.1.0"
   }
 }
