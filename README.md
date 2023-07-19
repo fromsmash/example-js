@@ -9,7 +9,8 @@ Examples available in the repository:
 * basic example of upload [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/uploader/src/basic.ts)
 * upload with custom configuration [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/uploader/src/customized.ts)
 * upload with folder tree [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/uploader/src/tree.ts)
-
+* upload string [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/uploader/src/string.ts)
+* upload Buffer [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/uploader/src/buffer.ts)
 ## node/ts/downloader
 
 * download example from a transfer id [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/basic_with_id.ts)
