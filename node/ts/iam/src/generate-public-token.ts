@@ -6,7 +6,7 @@ import { Iam } from "@smash-sdk/iam/10-2019";
 // It is a token that can be exposed publicly without compromising the security of your integration.
 // We recommend to scope the token to the IP address of the user that is using your integration, to prevent token theft.
 
-const token = "Put your api key here"; // The API key you want to use to generate the public token.
+const token = "Put your generated private key here"; // The API key you want to use to generate the public token.
 const iamSdk = new Iam({ region: "eu-west-3", token });
 
 // First, you need to decode the token to get the user id that correspond to the private key you previously generated.
@@ -14,7 +14,7 @@ iamSdk.decodeToken(token).then(res => {
     // Then, you can create a public token for this user.
     iamSdk.createUserToken({
         userId: res.id, // (Required) The user id you want to create a token for.
-        ip: "The IP address you want to restrict the token to.", // (Optional) IP address should follow IPV4 or IPV6 address format.
+        ip: "The IP address you want to associate the token to.", // (Optional) IP address should follow IPV4 or IPV6 address format.
         scope: "IP", // (Optional) Options are 'None' or 'IP'. Choose 'IP' if you want to restrict the token to the IP address you provided.
         refreshTokenDuration: "1d", // (Optional) Duration notation follows the format : number + unit. Units are 's' for seconds, 'm' for minutes, 'h' for hours, 'd' for days, 'w' for weeks, 'M' for months, 'y' for years.
         tokenDuration: "1d", // (Optional) Duration notation follows the format : number + unit. Units are 's' for seconds, 'm' for minutes, 'h' for hours, 'd' for days, 'w' for weeks, 'M' for months, 'y' for years.
