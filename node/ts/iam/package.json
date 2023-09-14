@@ -1,18 +1,15 @@
 {
-  "name": "downloader-example-1",
+  "name": "iam-example-1",
   "version": "1.0.0",
-  "description": "downloader example 1",
+  "description": "iam example 1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "basic-id": "ts-node ./src/basic_with_ids.ts",
-    "basic-url": "ts-node ./src/basic_with_url.ts",
-    "stream": "ts-node ./src/stream.ts"
+    "generate-public-token": "ts-node ./src/generate-public-token.ts"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.11.10",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",
@@ -20,6 +17,6 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@smash-sdk/downloader": "^0.1.1"
+    "@smash-sdk/iam": "0.0.10"
   }
 }
