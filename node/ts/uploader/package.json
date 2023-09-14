@@ -21,6 +21,6 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@smash-sdk/uploader": "^1.2.0"
+    "@smash-sdk/uploader": "^1.2.1"
   }
 }
