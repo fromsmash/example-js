@@ -27,7 +27,7 @@
                 .then(transfer => { console.log("Transfer", transfer); })
                 .catch(error => { console.log("Error", error); });
 
-            su.on('progress', (event) => { console.log(event.data.progress.percent); });
+            su.on('progress', (event) => { console.log(event.data.percent); });
         }
     </script>
 </body>
