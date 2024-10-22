@@ -1,12 +1,18 @@
 
-import { Link } from "@smash-sdk/link/10-2019";
+import { GetTargetInput, GetTargetOutput, Link, errors } from "@smash-sdk/link/10-2019";
 
-const linkSdk = new Link({ region: "eu-west-3", token: "Put your api key here" })
+const linkSdk = new Link({ token: "Put your Smash API key here" })
 
-linkSdk.getTarget({
+const params: GetTargetInput = {
     targetId: 'url',
-}).then(link => {
+};
+
+linkSdk.getTarget(params).then((link: GetTargetOutput) => {
     console.log("Link", link);
-}).catch(error => {
-    console.log("Error", error);
+}).catch((error: unknown) => {
+    if (error instanceof errors.GetTargetError.NotFoundError) {
+        console.log("Transfer not found.", error);
+    } else {
+        console.log("Error", error);
+    }
 });
