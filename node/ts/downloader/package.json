@@ -8,7 +8,9 @@
     "build": "tsc",
     "basic-id": "ts-node ./src/basic_with_ids.ts",
     "basic-url": "ts-node ./src/basic_with_url.ts",
-    "stream": "ts-node ./src/stream.ts"
+    "stream": "ts-node ./src/stream.ts",
+    "downloadSpecificFile": "ts-node ./src/download_specific_file.ts",
+    "downloadUnzippedFiles": "ts-node ./src/download_unzipped_files.ts"
   },
   "license": "MIT",
   "devDependencies": {
@@ -20,6 +22,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@smash-sdk/downloader": "^0.1.1"
+    "@smash-sdk/downloader": "^0.1.1",
+    "@smash-sdk/transfer": "^0.1.4"
   }
 }
