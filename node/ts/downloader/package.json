@@ -14,7 +14,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/bluebird": "^3.5.42",
     "@types/node": "^18.11.10",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
@@ -24,7 +23,6 @@
   },
   "dependencies": {
     "@smash-sdk/downloader": "^0.1.1",
-    "@smash-sdk/transfer": "^0.1.4",
-    "bluebird": "^3.7.2"
+    "@smash-sdk/transfer": "^0.1.4"
   }
 }

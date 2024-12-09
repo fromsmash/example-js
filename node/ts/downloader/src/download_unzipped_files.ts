@@ -1,9 +1,9 @@
 
 import { SmashDownloader } from "@smash-sdk/downloader";
 import { ListTransferFilesPreviewOutput, Transfer } from "@smash-sdk/transfer/01-2024";
-import Bluebird from "bluebird";
 
 const token = "Put your Smash API key";
+const concurrency = 5;
 
 async function listTransferFiles(transferId: string): Promise<ListTransferFilesPreviewOutput['files']> {
     const transferSdk = new Transfer({
@@ -32,9 +32,10 @@ async function downloadFile({ transferId, fileId, fileName }: { transferId: stri
 
 async function download(transferId: string) {
     const files = await listTransferFiles(transferId);
-    await Bluebird.map(files, async (file) => {
-        await downloadFile({ transferId, fileId: file.id, fileName: file.name });
-    }, { concurrency: 5 });
+    while (files.length) {
+        const filesToDownload = files.splice(0, concurrency);
+        await Promise.all(filesToDownload.map((file) => downloadFile({ transferId, fileId: file.id, fileName: file.name })));
+    }
 }
 
 download("Put a transfer id here").then(() => {
