@@ -1,18 +1,18 @@
 
 import { SmashDownloader } from "@smash-sdk/downloader";
-import { ListTransferFilesOutput, Transfer } from "@smash-sdk/transfer/01-2024";
+import { ListTransferFilesPreviewOutput, Transfer } from "@smash-sdk/transfer/01-2024";
 import Bluebird from "bluebird";
 
 const token = "Put your Smash API key";
 
-async function listTransferFiles(transferId: string): Promise<ListTransferFilesOutput['files']> {
+async function listTransferFiles(transferId: string): Promise<ListTransferFilesPreviewOutput['files']> {
     const transferSdk = new Transfer({
         token,
         region: "eu-west-3",
     });
-    const files = await transferSdk.listTransferFiles({ transferId });
+    const files = await transferSdk.listTransferFilesPreview({ transferId });
     while (files.next) {
-        const nextFiles = await transferSdk.listTransferFiles({ transferId, start: files.next });
+        const nextFiles = await transferSdk.listTransferFilesPreview({ transferId, start: files.next });
         files.files.push(...nextFiles.files);
         files.next = nextFiles.next;
     }

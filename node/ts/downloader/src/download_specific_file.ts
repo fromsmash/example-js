@@ -1,15 +1,15 @@
 
 import { SmashDownloader } from "@smash-sdk/downloader";
-import { GetTransferFileOutput, Transfer } from "@smash-sdk/transfer/01-2024";
+import { GetTransferFilePreviewOutput, Transfer } from "@smash-sdk/transfer/01-2024";
 
 const token = "Put your Smash API key";
 
-async function getTransferFile(transferId: string, fileId: string): Promise<GetTransferFileOutput['file']> {
+async function getTransferFile(transferId: string, fileId: string): Promise<GetTransferFilePreviewOutput['file']> {
     const transferSdk = new Transfer({
         token,
         region: "eu-west-3",
     });
-    const { file } = await transferSdk.getTransferFile({ transferId, fileId });
+    const { file } = await transferSdk.getTransferFilePreview({ transferId, fileId });
     return file;
 }
 
