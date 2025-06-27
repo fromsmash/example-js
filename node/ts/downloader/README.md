@@ -25,6 +25,14 @@ npm i
 ```javascript
  npm run stream
 ```
+* example to download a specific file [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/download_specific_file.ts)
+```javascript
+ npm run downloadSpecificFile
+```
+* example to download all files from a transfer without zip [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/download_unzipped_files.ts)
+```javascript
+ npm run downloadUnzippedFiles
+```
 
 ## Documentation
 

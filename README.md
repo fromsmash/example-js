@@ -19,6 +19,8 @@ Examples available in the repository about [Smash](https://api.fromsmash.com/) S
 * download example from a transfer id [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/basic_with_id.ts)
 * download example from a transfer url [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/basic_with_url.ts)
 * download example with stream [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/stream.ts)
+* example to download a specific file [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/download_specific_file.ts)
+* example to download all files from a transfer without zip [Link](https://github.com/fromsmash/example-js/blob/main/node/ts/downloader/src/download_unzipped_files.ts)
 
 ## Documentation
 
