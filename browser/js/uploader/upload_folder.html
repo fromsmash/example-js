@@ -16,7 +16,7 @@
     <script>
         function upload() {
             const fileInput = document.getElementById("uploadInput");
-            const su = new SmashUploader({ region: "eu-west-3", token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MzE1MzEwLWQwMDEtNDkxNi1hYTM0LTBiZDQyMmU0ODUzMy1jbyIsInVzZXJuYW1lIjoidGVycnlAZnJvbXNtYXNoLmNvbSIsInJlZ2lvbiI6ImV1LXdlc3QtMyIsImlwIjoiOTAuODUuMTk0LjU5IiwiYWNjb3VudCI6IjE3MzE1MzEwLWQwMDEtNDkxNi1hYTM0LTBiZDQyMmU0ODUzMy1jbyIsImlhdCI6MTY4MDAxODU4OCwiZXhwIjoxNjgwNjIzMzg4fQ.rKn-Os3jCaDK7C067NlOtOziVkRZKrLl0w63alddpp8" })
+            const su = new SmashUploader({ region: "eu-west-3", token: "Put your api key here" })
             const parsedFiles = [...fileInput.files].map(file => {
                 return {
                     name: file.webkitRelativePath,

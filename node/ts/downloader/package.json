@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "basic-id": "ts-node ./src/basic_with_ids.ts",
+    "basic-id": "ts-node ./src/basic_with_id.ts",
     "basic-url": "ts-node ./src/basic_with_url.ts",
     "stream": "ts-node ./src/stream.ts",
     "downloadSpecificFile": "ts-node ./src/download_specific_file.ts",
